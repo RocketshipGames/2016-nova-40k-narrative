@@ -102,8 +102,8 @@
   \setfoot
     [\color{LineColor}\coalitionfont\thepage]% Even-left
     []% Even-center
-    [\color{LineColor}\coalitionfont 2016 NOVA Open 40k Narrative]% Even-right
-    {\color{LineColor}\coalitionfont\chaptertitle}% Odd-left
+    [\color{LineColor}\coalitionfont\MakeUppercase{\chaptertitle}]% Even-right
+    {\color{LineColor}\coalitionfont 2016 NOVA OPEN 40K NARRATIVE}% Odd-left
     {}% Odd-center
     {\color{LineColor}\coalitionfont\thepage}% Odd-right
 }
@@ -112,8 +112,8 @@
   \setfoot
     [\color{LineColor}\coalitionfont\thepage]% Even-left
     []% Even-center
-    [\color{LineColor}\coalitionfont 2016 NOVA Open 40k Narrative]% Even-right
-    {\color{LineColor}\coalitionfont\chaptertitle}% Odd-left
+    [\color{LineColor}\coalitionfont\MakeUppercase{\chaptertitle}]% Even-right
+    {\color{LineColor}\coalitionfont 2016 NOVA OPEN 40K NARRATIVE}% Odd-left
     {}% Odd-center
     {\color{LineColor}\coalitionfont\thepage}% Odd-right
 }
@@ -153,7 +153,7 @@
 {\color{LineColor}\fontsize{36}{36}\coalitionfont} % Format
 {} % Label
 {0pt} % Separation
-{\uppercase{#1}} % Command (explicit)
+{\MakeUppercase{#1}} % Command (explicit)
 
 \titlespacing*{\chapter}
 {0pt}% Left
