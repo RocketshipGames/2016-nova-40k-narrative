@@ -11,7 +11,7 @@
 
 \pdfminorversion=4
 
-\RequirePackage{nameref}
+\usepackage{etoolbox}
 
 \newcommand{\backgroundpicodd}{art/background/background-odd.pdf}
 \newcommand{\backgroundpiceven}{art/background/background-even.pdf}
@@ -94,17 +94,32 @@
 \RequirePackage[explicit,compact,pagestyles]{titlesec}
 
 \usepackage[pagestyles]{titlesec}
+
+%\pretocmd{\chapter}{
+%}{}{}
+
 \newpagestyle{main}{%
   \setfoot
-    [\color{LineColor}\bf\thepage]% Even-left
+    [\color{LineColor}\coalitionfont\thepage]% Even-left
     []% Even-center
-    [\color{LineColor}\bf NOVA Open 40k Narrative]% Even-right
-    {\color{LineColor}\bf \chaptertitle}% Odd-left
+    [\color{LineColor}\coalitionfont 2016 NOVA Open 40k Narrative]% Even-right
+    {\color{LineColor}\coalitionfont\chaptertitle}% Odd-left
     {}% Odd-center
-    {\color{LineColor}\bf\thepage}% Odd-right
+    {\color{LineColor}\coalitionfont\thepage}% Odd-right
 }
+
+\newpagestyle{chap}{%
+  \setfoot
+    [\color{LineColor}\coalitionfont\thepage]% Even-left
+    []% Even-center
+    [\color{LineColor}\coalitionfont 2016 NOVA Open 40k Narrative]% Even-right
+    {\color{LineColor}\coalitionfont\chaptertitle}% Odd-left
+    {}% Odd-center
+    {\color{LineColor}\coalitionfont\thepage}% Odd-right
+}
+
 \pagestyle{main}
-\assignpagestyle{\chapter}{main}
+\assignpagestyle{\chapter}{chap}
 
 % \RequirePackage{fancyhdr}
 % \newcommand{\setupheaderfooter}{
@@ -121,6 +136,11 @@
 %                                            % which are in plain style
 
 %%----------------------------------------------------------------------
+%%-- Fonts
+
+\newcommand{\coalitionfont}{\usefont{T1}{coalition}{m}{n}}
+
+%%----------------------------------------------------------------------
 %%-- Section Headings
 
 
@@ -130,17 +150,16 @@
 
 \titleformat{\chapter}
 [display] % Shape
-{\color{LineColor}\fontsize{14}{14}\bfseries\sffamily\Huge} % Format
+{\color{LineColor}\fontsize{36}{36}\coalitionfont} % Format
 {} % Label
 {0pt} % Separation
-{#1} % Command (explicit)
+{\uppercase{#1}} % Command (explicit)
 
 \titlespacing*{\chapter}
-{0pt}
-{0pt}
-{0pt}
+{0pt}% Left
+{0pt}% Before
+{0pt}% After
 
-\usepackage{etoolbox}
 \makeatletter
 \patchcmd{\ttlh@display}{\strut}{}{}{}
 \makeatother
@@ -241,6 +260,5 @@ keepaspectratio]{#1}%
 
 \RequirePackage{datetime}
 \yyyymmdddate
-
 
 \endinput
