@@ -166,15 +166,27 @@
 
 \titleformat{\section}
 [display] % Shape
-{\bfseries\sffamily\Large} % Format
+{\color{LineColor}\fontsize{18}{18}\coalitionfont} % Format {\bfseries\sffamily\Large} % Format
 {} % Label
 {0pt} % Separation
 {#1} % Command (explicit)
 
 \titlespacing*{\section}
-{0pt}
-{0pt}
-{0pt}
+{0pt}% left margin
+{16pt}% before
+{4pt}% after
+
+\titleformat{\subsection}
+[display] % Shape
+{\color{LineColor}\fontsize{14}{14}\coalitionfont} % Format {\bfseries\sffamily\Large} % Format
+{} % Label
+{0pt} % Separation
+{#1} % Command (explicit)
+
+\titlespacing*{\subsection}
+{0pt}% left margin
+{16pt}% before
+{4pt}% after
 
 % \makeatletter
 % \def\@makechapterhead#1{%
