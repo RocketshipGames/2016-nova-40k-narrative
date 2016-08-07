@@ -9,6 +9,10 @@
 
 \RequirePackage[cm,myheadings]{fullpage}
 
+%\usepackage[letterpaper,%bindingoffset=0.2in,%
+%            left=0.75in,right=0.75in,top=1in,bottom=1in,%
+%            footskip=.425in]{geometry}
+
 \pdfminorversion=4
 
 \usepackage{etoolbox}
@@ -86,6 +90,11 @@
 \newcolumntype{F}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{E}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{O}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\RequirePackage{enumitem}
 
 %%----------------------------------------------------------------------
 %%-- Header and Footer

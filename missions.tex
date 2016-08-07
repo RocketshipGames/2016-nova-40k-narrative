@@ -4,36 +4,55 @@
 \chapter{Missions}
 \@openrighttrue\makeatother
 
-This chapter presents the missions used throughout the campaign.
+\newcommand{\missionicon}{\raisebox{-8pt}[6pt][-2pt]{\protect\includegraphics{art/icons/mission.pdf}}}
+\newcommand{\single}{\hfill~\missionicon}
+
+Each round of the campaign, as part of their strategic decision
+making, the two alliances will alternate putting forward a player and
+a mission chosen from those in this section.  The other team will then
+respond with an opponent and a table for the match.  These pairings
+will be conducted within groups of~8 per side, determined by win/loss
+ranks.  Missions marked with a~\resizebox{!}{4pt}{\missionicon}~may only be selected once
+within each group.
+
+\textbf{Some missions need special models, such as convoy vehicles,
+  shuttlecraft, and VIPs.  All matches will also use a set of
+  civilians.  These will all be provided.}
 
 \section{Scoring}
 
 Match results are determined by scoring primary, secondary, and
-tertiary objectives as given for the mission.  No more than a total
-of~9 victory points may be earned for primary objectives,~6 for
-secondary objectives, and~5 for tertiary objectives, for a total of no
-more than~20 victory points possible in a match.  The winner is the
-player with more victory points at game end, or a draw if they earned
-equal amounts.
+tertiary objectives.  All missions use the same tertiary and secondary
+objectives, explained below.  Individual missions define their primary
+objective(s).  \underline{No more than a total of~9 victory points may
+  be earned for primary objectives,}~6 for secondary objectives, and~5
+for tertiary objectives, for a total of no more than~20 victory points
+possible in a match.  The winner is the player with more victory
+points at game end, or a draw if they earned equal amounts.
   
 \section{Standard Mission Rules}
 
 The following special rules are applied to each mission unless noted
 otherwise.
 
+\vspace{-2pt}
 \paragraph{Easy Recon.}  Players add~+1 to their roll to
 choose first or second deployment for each superheavy vehicle or
 gargantuan creature in the opposing army.
 
+\vspace{-2pt}
 \paragraph{Reserves.} As defined on page~135 of the main
 \emph{Warhammer 40,000} rulebook.
 
+\vspace{-2pt}
 \paragraph{Seize the Initiative.} As defined on page~132 of
 the main \emph{Warhammer 40,000} rulebook.
 
+\vspace{-2pt}
 \paragraph{Variable Game Length.} As defined on page~133 of
 the main \emph{Warhammer 40,000} rulebook.
 
+\vspace{-2pt}
 \paragraph{All In.}  Units/models in reserve at game end count
 as completely destroyed/removed as a casualty.
 
@@ -43,7 +62,7 @@ The following common tertiary objectives apply in each mission.
 \underline{At most~5 total victory points may be}
 \underline{earned by a player across all of the tertiary objectives.}
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item \textit{Victory Through Attrition.}  Score~1 victory point for
   every~2 unsaved hull points or wounds suffered by an opposing
   superheavy vehicle or gargantuan creature through any means,
@@ -78,4 +97,19 @@ The following common tertiary objectives apply in each mission.
 
 %%----------------------------------------------------------------------
 %%----------------------------------------------------------------------
-\input{missions/brushfire}
+%\input{missions/brushfire}
+
+\input{secondaries}
+
+\input{civilians}
+
+\input{missions/comms}
+\input{missions/escort}
+\input{missions/shuttle}
+\input{missions/supplies}
+\input{missions/vip}
+
+\input{missions/destroy}
+\input{missions/ground}
+\input{missions/killpoints}
+\input{missions/maelstrom}
