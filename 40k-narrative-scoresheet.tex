@@ -1,0 +1,109 @@
+%% pdftk A=40k-narrative-scoresheet.pdf B=tactical-objectives.pdf cat A A A A A A B B output 2016-40k-narrative-scoresheets.pdf
+\documentclass{40k}
+
+\newcommand{\checkbox}{\raisebox{-1pt}{\fbox{\hbox to 1em{\vbox to 1em{}}}}}
+
+\newcommand{\letterbox}{\fbox{\hbox to 2em{\vbox to 32pt{}}}}
+
+\newcommand{\scorebox}{\fbox{\hbox to 32pt{\vbox to 32pt{}}}}
+
+\newcommand{\namebox}[1]{\fbox{\hbox to 92pt{\vbox to 64pt{\vfill\it #1}}}}
+
+\pagestyle{empty}
+
+\newcommand{\coalitionfont}{\usefont{T1}{coalition}{m}{n}}
+\definecolor{LightGray}{RGB}{245,245,245}
+
+
+\newcommand{\scoresheet}{%
+\clearpage%
+\Large\bf%
+\centerline{\fontsize{28}{28}\coalitionfont Scoresheet}
+
+\vfill
+
+\noindent
+Round: \raisebox{-8pt}{\hbox to 1.5in{\enspace\hrulefill}}
+\hfill
+Mission: \raisebox{-8pt}{\hbox to 3in{\enspace\hrulefill}}
+
+\vspace*{1em}
+\noindent
+My Secondary Objective: \raisebox{-8pt}{\hbox to 1.5in{\enspace\hrulefill}}
+\hfill
+Opponent's:  \raisebox{-8pt}{\hbox to 1.5in{\enspace\hrulefill}}
+
+\vfill
+\hrule
+\vfill
+
+\renewcommand{\baselinestretch}{0.2}
+\setlength\tabcolsep{3pt}
+\centerline{\begin{tabular}{c C{2em} C{0.5in} c C{0.5in} c C{0.5in} c C{0.5in} C{2em} C{0.5in} c C{0.5in}}
+{\textbf{\textit{Player}}} & & \multicolumn{7}{c}{\textbf{\textit{Victory Points}}} & & \multicolumn{3}{c}{\textbf{\textit{Reputation}}} \\
+& &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Primary}}}} & &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Secondary}}}} & &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Tertiary}}}} & &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Total}}}} & &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Fame}}}} & &
+\parbox{32pt}{\centerline{\small\textbf{\textit{Infamy}}}}
+\\
+\textbf{\raisebox{-16pt}{\hbox to 128pt{\enspace\hrulefill}}}  & &
+\scorebox & \bf + &
+\scorebox & \bf + &
+\scorebox & \bf = &
+\scorebox & &
+\scorebox & &
+\scorebox\\
+(you)\\
+\textbf{\raisebox{-16pt}{\hbox to 128pt{\enspace\hrulefill}}}  & &
+\scorebox & \bf + &
+\scorebox & \bf + &
+\scorebox & \bf = &
+\scorebox & &
+\scorebox & &
+\scorebox
+\\
+(opponent)\\
+\end{tabular}}
+
+\bigskip
+\centerline{\it Maximum victory points: Primary~9, Secondary~6, Tertiary~5}
+
+\bigskip
+\centerline{\it Fill out Fame and Infamy as scored, do not subtract difference}
+
+\vfill
+\hrule
+\vfill
+
+\noindent\emph{\bf My opponent was (check any that apply):}
+
+\vspace*{8pt}
+\centerline{\begin{tabular}{cL{6in}c}
+\checkbox & Openly hostile or rude & {\it -3 pts}\\
+\rowcolor{LightGray}\checkbox & Unnecessarily competitive in army list or attitude & {\it -2 pts}\\
+\checkbox & Sloppy with measuring, moving, line of sight, or dice & {\it -2 pts}\\
+\rowcolor{LightGray}\checkbox & Unreasonably late, overly slow play, or too inattentive & {\it -1 pts} \\
+\checkbox & Overly unfamiliar with rules/made too many mistakes & {\it -1 pts}\\
+\rowcolor{LightGray}\checkbox & Not prepared with clear, readable, typed army lists & {\it -1 pts}\\
+\end{tabular}}
+
+\bigskip
+\centerline{\it Sportsmanship penalties apply only to the player, not their alliance}
+}
+
+\begin{document}
+%\squelchbackground%
+
+\scoresheet
+
+%\clearpage
+%\squelchbackground
+%\includepdf[pages={1},fitpaper]{tactical-objectives}
+%\includepdf[pages={1},fitpaper]{tactical-objectives}
+%\pagebreak
+%\restorebackground
+
+\end{document}
