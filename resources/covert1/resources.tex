@@ -1,0 +1,107 @@
+\documentclass{40k}
+
+\usepackage{enumitem}
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{ragged2e}
+
+\input{resourcecard.tex}
+
+\begin{document}
+\centering
+
+\clearpage
+\squelchbackground
+\begin{landscape}
+\vspace*{-15pt}
+
+
+\newcommand{\coverta}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Backfield Reconnaissance}
+\bigskip\small
+
+After both players deploy, secretly select one friendly unit,
+identifying it in writing on this card.  At game end you achieve this
+covert mission if that unit scores Linebreaker, earning 9 points for
+your alliance toward your battle zone.
+
+
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\begin{minipage}{1.0\linewidth}\centering
+  \checkbox \hspace{1em} Mission accomplished!\\
+\bigskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\bigskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+\newcommand{\covertb}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Personnel Observation}
+\bigskip\small
+
+After both players deploy, secretly select one friendly character and
+one enemy character, identifying them in writing on this card.  If at
+any point your character is within 6'' of the enemy character, you
+achieve this mission and earn 9 points for your alliance toward
+your battle zone.
+
+
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\vspace{-2pt}%
+\begin{minipage}{1.0\linewidth}\centering
+  \checkbox \hspace{1em} Mission accomplished!\\
+\bigskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\bigskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+
+\noindent%
+\coverta%
+%
+%
+\hfill%
+%
+%
+\coverta%
+%
+%
+\hfill%
+%
+%
+\coverta
+
+\vfill
+
+\coverta
+%
+\hfill%
+%
+\coverta
+%
+\hfill%
+%
+\coverta
+
+\end{landscape}
+\clearpage
+\restorebackground
+\end{document}

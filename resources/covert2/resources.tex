@@ -1,0 +1,181 @@
+\documentclass{40k}
+
+\usepackage{enumitem}
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{ragged2e}
+
+\input{resourcecard.tex}
+
+\begin{document}
+\centering
+
+\clearpage
+\squelchbackground
+\begin{landscape}
+\vspace*{-15pt}
+
+
+\newcommand{\coverta}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Backfield Reconnaissance}
+\bigskip\small
+
+After both players deploy, secretly select one friendly unit,
+identifying it in writing on this card.  At game end you achieve this
+covert mission if that unit scores Linebreaker, earning 9 points for
+your alliance toward your battle zone.
+
+
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\begin{minipage}{1.0\linewidth}\centering
+  \checkbox \hspace{1em} Mission accomplished!\\
+\bigskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\bigskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+\newcommand{\covertb}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Personnel Observation}
+\bigskip\small
+
+After both players deploy, secretly select one friendly character and
+one enemy character, identifying them in writing on this card.  If at
+any point your character is within 6'' of the enemy character, you
+achieve this mission and earn 9 points for your alliance toward
+your battle zone.
+
+
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\vspace{-2pt}%
+\begin{minipage}{1.0\linewidth}\centering
+  \checkbox \hspace{1em} Mission accomplished!\\
+\bigskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\bigskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+\newcommand{\covertc}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont HVT Capture}
+\bigskip\scriptsize
+
+Before any deployment, publicly identify a friendly unit as leading a
+covert mission.  Reveal this card at any time to grant that unit the
+Tank Hunters, Monster Hunters, Precision Shots, and Precision Strikes
+USRs.
+
+\hspace{1em} After deployment concludes, secretly select as the target
+of this mission one enemy vehicle, monstrous or gargantuan creature,
+or character with at least 3 wounds, and identify it in writing
+\emph{on your scoresheet.}
+
+\hspace{1em} Immediately upon the target losing its final wound or
+hull point, you earn 3 points for your alliance toward your battle
+zone.  In addition, place a casualty marker at the target's last
+location.  At the end of your first turn in which you control that
+marker, you earn 3 points for your alliance.  If you control the
+marker at game end you earn an additional 3 points for your alliance.
+
+\hspace{1em} The unit leading the mission does not have to itself
+eliminate the target or control the casualty marker.
+
+\small
+\bigskip%
+\vspace{-2pt}%
+\begin{minipage}{1.0\linewidth}\centering
+Points earned: \underline{~~~~~~~~~~~~~}\\
+\smallskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\smallskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+\newcommand{\covertd}{%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Search}
+\bigskip\scriptsize
+
+After deployment concludes, place 3 search markers in separate terrain
+pieces outside your deployment zone.
+
+\hspace{1em} At the end of your first turn in which you control any
+search marker, you earn 4 points for your alliance toward your battle
+zone.  In addition, randomly select one of the two other search
+markers.  At the end of your first turn in which you control that
+marker you earn 5 points for your alliance toward your battle zone.
+
+\hspace{1em} If you control multiple search markers at the end of the
+first turn in which you do so, you earn 9 points for your alliance and
+do not roll to select another.
+
+\small
+\bigskip%
+\bigskip%
+\bigskip%
+\bigskip%
+\smallskip%
+%\vspace{-2pt}%
+\begin{minipage}{1.0\linewidth}\centering
+Points earned: \underline{~~~~~~~~~~~~~}\\
+\bigskip%
+Your Name: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+\bigskip%
+Opponent's Signature: \underline{~~~~~~~~~~~~~~~~~~~~~~~~~}
+\end{minipage}
+}%
+\drawscorecard
+}
+
+\noindent%
+\covertd%
+%
+%
+\hfill%
+%
+%
+\covertd%
+%
+%
+\hfill%
+%
+%
+\covertd
+
+\vfill
+
+\covertd
+%
+\hfill%
+%
+\covertd
+%
+\hfill%
+%
+\covertd
+
+\end{landscape}
+\clearpage
+\restorebackground
+\end{document}

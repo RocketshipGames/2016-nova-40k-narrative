@@ -1,0 +1,69 @@
+
+\documentclass{40k}
+
+\usepackage{enumitem}
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{ragged2e}
+
+\input{resourcecard.tex}
+
+\begin{document}
+\centering
+
+\clearpage
+\squelchbackground
+\begin{landscape}
+\vspace*{-15pt}
+
+\noindent%
+\renewcommand{\scorematrix}{%
+\centerline{\Large\fontfamily{ptm}\selectfont Energy Field Generator}
+\bigskip\small
+
+An \textbf{Energy Field Generator} is a fortification with the
+following profile:
+
+\smallskip%
+\begin{minipage}{1.0\linewidth}\centering
+T7 ~~ W3 ~~ SV 4+/5++
+\end{minipage}
+
+\bigskip%
+These may be deployed anywhere in your table half.  An impassible 5''
+tall shield is created in a straight line between each pair of your
+Energy Field Generators within 8'' of each other.  The shield blocks
+direct fire but not LOS.  You may disable or enable any shield section
+between a pair of your Energy Field Generators at the start of your
+movement phase.  Declare the starting condition of each before the
+game begins.
+
+%
+}
+
+\drawscorecard
+%
+\hfill%
+%
+\drawscorecard
+%
+\hfill%
+%
+\drawscorecard
+
+\vfill
+
+\drawscorecard
+%
+\hfill%
+%
+\drawscorecard
+%
+\hfill%
+%
+\drawscorecard
+
+\end{landscape}
+\clearpage
+\restorebackground
+\end{document}

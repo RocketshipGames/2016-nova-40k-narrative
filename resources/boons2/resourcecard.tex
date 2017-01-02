@@ -1,0 +1,78 @@
+%%-- For cards
+\pgfmathsetmacro{\scorecardroundingradius}{2mm}
+\pgfmathsetmacro{\scorestriproundingradius}{1mm}
+\pgfmathsetmacro{\scoreruleheight}{0.1}
+\pgfmathsetmacro{\scorestripwidth}{1.1}
+\pgfmathsetmacro{\scorestrippadding}{0.1}
+\pgfmathsetmacro{\scoretextpadding}{0.3}
+\newcommand{\scorestripcolor}{black}
+%%-------
+
+\pgfmathsetmacro{\scorecardwidth}{8.25}
+\pgfmathsetmacro{\scorecardheight}{9}
+
+\newcommand{\scorestripfontsize}{\huge}
+\newcommand{\scorecaptionfontsize}{\LARGE}
+\newcommand{\scoretextfontsize}{\large}
+
+\newcommand{\scorestriptext}%
+  {RESOURCE \rotatebox[origin=c]{-90}{\includegraphics[width=0.6cm]{icon-skull}}}
+%STRATAGEM\hspace{0.5em}
+
+\newcommand{\checkbox}{\raisebox{-1pt}{\fbox{\hbox to 1em{\vbox to 1em{}}}}}
+
+\newcommand{\letterbox}{\fbox{\hbox to 2em{\vbox to 32pt{}}}}
+
+\newcommand{\scorebox}{\fbox{\hbox to 32pt{\vbox to 32pt{}}}}
+
+\newcommand{\namebox}[1]{\fbox{\hbox to 92pt{\vbox to 64pt{\vfill\it #1}}}}
+
+%%----------------------------------------------------------------------
+%%----------------------------------------------------------------------
+\newcommand{\drawscorecard}{%
+\begin{tikzpicture}%
+  \clip (-0.05, -0.05) rectangle (\scorecardwidth+.05, \scorecardheight+.05);
+
+  %%-- Draw the card back and outline
+  \draw[rounded corners=\scorecardroundingradius,fill=white,draw=none] (0,0)
+    rectangle (\scorecardwidth,\scorecardheight);
+%  \node[above left] at (\scorecardwidth+0.1, -0.1)
+%    {\includegraphics[width=3.5in]{background-skull}};
+  \draw[rounded corners=\scorecardroundingradius] (0,0) rectangle
+    (\scorecardwidth,\scorecardheight);
+
+  %%-- Draw the side strip
+  \fill[\scorestripcolor,rounded corners=\scorestriproundingradius]
+    (\scorestrippadding,\scorestrippadding) rectangle
+    (\scorestrippadding+\scorestripwidth,\scorecardheight-\scorestrippadding)
+    node[rotate=90,above left,white,font=\scorestripfontsize\fontfamily{ptm}\selectfont] {\raisebox{0pt}[15pt][3pt]{\vbox to -18pt{}} \scorestriptext};
+
+  %%-- Draw the player info lines
+    \node[text width=(\scorecardwidth-\scorestrippadding-\scorestripwidth-2*\scoretextpadding)*1cm,
+          below right,inner sep=0] at
+          (\scorestrippadding+\scorestripwidth+\scoretextpadding,\scorecardheight-\scoretextpadding)
+    {\scoretextfontsize%
+      \begin{minipage}[b]{1.0\linewidth}
+
+        %\centerline{\Huge\bf\sc\fontfamily{ptm}\selectfont Scorecard}
+
+        \scorematrix
+      \end{minipage}
+};
+
+%\vspace{-12pt}
+%\small
+%My opponent was (check any that apply; docking from~7pts):\\
+%\precheck Openly hostile or rude \hfill [-2]\\
+%\precheck Overly competitive in army list or attitude \hfill [-2]\\
+%\precheck Unfriendly or disengaged \hfill [-1]\\
+%\precheck Sloppy with measuring and moving \hfill [-1]\\
+%\precheck Unreasonably late or played unacceptably slow \hfill [-1]
+\end{tikzpicture}
+}
+
+\newcommand{\precheck}{\smallskip\hspace{2em}\raisebox{-2pt}{\checkbox}~ }
+
+\newcommand{\scorematrix}{%
+REPLACE
+}
